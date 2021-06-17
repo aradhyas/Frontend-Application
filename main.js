@@ -1,13 +1,6 @@
-// const plansSwitch = document.querySelector(".plans-switch");
-// const basicPrice = document.querySelector(".basic-price");
-// const professionalPrice = document.querySelector(".professional-price");
-// const businessPrice = document.querySelector(".business-price");
-// const planDuration = document.querySelectorAll(".plan-duration");
-
 const qualified20 = document.querySelector(".basic-price20");
 const qualified40 = document.querySelector(".basic-price40");
 const qualified80 = document.querySelector(".basic-price80");
-
 const finalPrice20 = document.querySelector(".finalPrice20");
 const finalPrice40 = document.querySelector(".finalPrice40");
 const finalPrice80 = document.querySelector(".finalPrice80");
@@ -22,9 +15,18 @@ function func1(value) {
     //todo: update the DOM with the new text
   }
   	selectedId = value;
-     updateValues(value);
+    updateValues(value);
+  	localStorage.setItem("selectedId", selectedId);
   }
 
+  // function test1(){
+  // 	var lsSelectedId = localStorage.getItem("selectedId");
+  // 	if(!lsSelectedId){
+  // 		lsSelectedId=3;
+  // 		localStorage.setItem("selectedId", lsSelectedId);
+  // 	}
+  // 	func1(lsSelectedId);
+  // }
 
 function updateValues(value){
 	switch(value){
@@ -73,4 +75,13 @@ function updateValues(value){
 			finalPrice80.innerText = "$10159";
 			break;
 		}
+}
+
+window.onload = function() {
+	var selectedId = localStorage.getItem("selectedId");
+	if(!selectedId){
+		selectedId = 3
+		localStorage.setItem("selectedId", selectedId);
+	}
+	func1(parseInt(selectedId));	
 }

@@ -16,8 +16,13 @@
 }
 
 .btn-selected {
-  background-color: black !important;
+  background-color: #5a6f90 !important;
   color: white !important;
+}
+
+.qualifiedColor{
+	background-color: #5a6f90;
+	color: #fff;
 }
 
 .price{
@@ -98,10 +103,12 @@
 }
 
 .pricing-table .table {
-  background: var(--light-color);
-  width: 260px;
-  padding: 32px;
+  background: #fff;
+  width: 250px;
+  padding: 20px;
   position: relative;
+  margin: 10px;
+  margin-top: 70px;
 }
 
 .pricing-table h3 {
@@ -148,7 +155,7 @@
 }
 
 .pricing-table .btn {
-  background: var(--dark-blue);
+  background: #fff;
   padding: 16px 0;
   display: inline-block;
   width: 100%;
@@ -157,14 +164,16 @@
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  border-radius: 24px;
+  border: 2px solid #FF8C00;
+  border-color: #FF8C00;
+  color: #FF8C00;
   margin-top: 16px;
   transition: all 400ms;
 }
 
-.pricing-table a.btn:hover {
+/*.pricing-table a.btn:hover {
   background: #022435;
-}
+}*/
 
 .pricing-table .table img.table-bg {
   position: absolute;
@@ -174,14 +183,15 @@
   width: 100%;
 }
 
-/*.pricing-table .table .content {
+.pricing-table .table .content {
   z-index: 200;
   position: relative;
-}*/
+
+}
 
 .pricing-table .table.best-value {
-  background: var(--dark-blue);
-  color: #fff;
+  /*background: var(--dark-blue);*/
+  color: #000;
   border-radius: 24px;
   width: 280px;
 }
@@ -194,7 +204,7 @@
   text-align: center;
   padding: 8px;
   border-radius: 24px 24px 0 0;
-  background: var(--pink);
+  background: #FF8C00;
   font-weight: bold;
 }
 
@@ -213,9 +223,13 @@
 }
 
 .pricing-table .table.table.best-value a.btn:hover {
-  background: #ffe4a4;
+  background: #FF8C00;
 }
 
 .pricing-table .table.best-value .description {
   color: #eee;
+}
+
+.tableEnterprise{
+
 }
