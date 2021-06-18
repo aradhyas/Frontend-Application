@@ -1,128 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Take Home Activity</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="pricing-table-container">
-      <div class="pricing-header">
-        <div class="btn-group">
-          <button id="1" onclick="func1(1)" class="btn-selected">
-            $100-$200
-          </button>
-          <button id="2" onclick="func1(2)">$200-$300</button>
-          <button id="3" onclick="func1(3)">$300-$400</button>
-          <button id="4" onclick="func1(4)">$400-$500</button>
-          <button id="5" onclick="func1(5)">$500k+</button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Take Home Activity</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="pricing-table-container">
+    <div class="pricing-header">
+      <div class="btn-group">
+        <button id="1" onclick="func1(1)" class="btn-selected">
+          $100-$200
+        </button>
+        <button id="2" onclick="func1(2)">$200-$300</button>
+        <button id="3" onclick="func1(3)">$300-$400</button>
+        <button id="4" onclick="func1(4)">$400-$500</button>
+        <button id="5" onclick="func1(5)">$500k+</button>
       </div>
-
-      <div class="pricing-table">
-        <div class="table">
-          <div class="content">
-            <div class="qualifiedColor"><h3>Qualified 20</h3></div>
-
-            <div class="price-container">
-              <span class="price basic-price20">$69</span>
-            </div>
-
-            <div class="description">
-              Per Qualified lead
-            </div>
-
-            <ul class="features">
-              <li>---------------------</li>
-              <li>Qualified leads per month</li>
-              <span class="leads20">20</span>
-              <li>---------------------</li>
-              <li>Platform fee per month</li>
-              <span class="fee">$299</span>
-            </ul>
-            <div class="qualifiedColor"><h3 class="finalPrice20">$1679/mo</h3></div>
-
-            <a href="#" class="btn">Start your trial</a>
-        </div>
     </div>
 
-
-        <div class="table">
-          <div class="content">
-            <div class="qualifiedColor"><h3>Qualified 40</h3></div>
-
-            <div class="price-container">
-              <span class="price basic-price40">$67</span>
-            </div>
-
-            <div class="description">
-              Per Qualified lead
-            </div>
-
-            <ul class="features">
-              <li>--------------------</li>
-              <li>Qualified leads per month</li>
-              <span class="leads40">40</span>
-              <li>--------------------</li>
-              <li>Platform fee per month</li>
-              <span class="fee">$599</span>
-            </ul>
-            <div class="qualifiedColor"><h3 class="finalPrice40">$3279/mo</h3></div>
-
-            <a href="#" class="btn">Start your trial</a>
+    <div class="pricing-table">
+      <div class="table">
+        <div class="content">
+          <div class="qualifiedColor">
+            <h3>Qualified 20</h3>
           </div>
-        </div>
 
-        <div class="table best-value">
-          <span class="value">Most Popular!</span>
-
-          <div class="content">
-            <div class="qualifiedColor"><h3>Qualified 80</h3></div>
-
-            <div class="price-container">
-              <span class="price basic-price80">$63</span>
-            </div>
-
-            <div class="description" style="color: #000000">
-              Per Qualified lead
-            </div>
-
-            <ul class="features">
-              <li>---------------------</li>
-              <li>Qualified leads per month</li>
-              <span class="leads80">80</span>
-              <li>---------------------</li>
-              <li>Platform fee per month</li>
-              <span class="fee">$799</span>
-            </ul>
-            <div class="qualifiedColor"><h3 class="finalPrice80">$5839/mo</h3></div>
-
-            <a href="#" class="btn">Start your trial</a>
+          <div class="price-container">
+            <span class="price basic-price20">$69</span>
           </div>
-        </div>
 
+          <div class="description">
+            Per Qualified lead
+          </div>
 
-        <div class="tableEnterprise">
-          <div class="content">
-            <div class="qualifiedColor"><h3>Enterprise</h3></div>
-            <div class="description">
-            	<ul class="features">
-              Want more than 80 qualified leads each month?
+          <ul class="features">
+            <li>---------------------</li>
+            <li>Qualified leads per month</li>
+            <span class="leads20">20</span>
+            <li>---------------------</li>
+            <li>Platform fee per month</li>
+            <span class="fee">$299</span>
           </ul>
-            </div>
-            <a href="#" class="btn">Get in Touch</a>
+          <div class="qualifiedColor">
+            <h3 class="finalPrice20">$1679/mo</h3>
           </div>
+
+          <a id ="qualified20-btn"href="#myModal" data-toggle="modal" class="btn">Start your trial</a>
+        </div>
+      </div>
+
+
+      <div class="table">
+        <div class="content">
+          <div class="qualifiedColor">
+            <h3>Qualified 40</h3>
+          </div>
+
+          <div class="price-container">
+            <span class="price basic-price40">$67</span>
+          </div>
+
+          <div class="description">
+            Per Qualified lead
+          </div>
+
+          <ul class="features">
+            <li>--------------------</li>
+            <li>Qualified leads per month</li>
+            <span class="leads40">40</span>
+            <li>--------------------</li>
+            <li>Platform fee per month</li>
+            <span class="fee">$599</span>
+          </ul>
+          <div class="qualifiedColor">
+            <h3 class="finalPrice40">$3279/mo</h3>
+          </div>
+
+          <a id ="qualified40-btn" href="#myModal" data-toggle="modal" class="btn">Start your trial</a>
+        </div>
+      </div>
+
+      <div class="table best-value">
+        <span class="value">Most Popular!</span>
+
+        <div class="content">
+          <div class="qualifiedColor">
+            <h3>Qualified 80</h3>
+          </div>
+
+          <div class="price-container">
+            <span class="price basic-price80">$63</span>
+          </div>
+
+          <div class="description" style="color: #000000">
+            Per Qualified lead
+          </div>
+
+          <ul class="features">
+            <li>---------------------</li>
+            <li>Qualified leads per month</li>
+            <span class="leads80">80</span>
+            <li>---------------------</li>
+            <li>Platform fee per month</li>
+            <span class="fee">$799</span>
+          </ul>
+          <div class="qualifiedColor">
+            <h3 class="finalPrice80">$5839/mo</h3>
+          </div>
+
+          <a id ="qualified80-btn" href="#myModal" data-toggle="modal" class="btn">Start your trial</a>
+        </div>
+      </div>
+
+
+      <div class="tableEnterprise">
+        <div class="content">
+          <div class="qualifiedColor">
+            <h3>Enterprise</h3>
+          </div>
+          <div class="description">
+            <ul class="features">
+              Want more than 80 qualified leads each month?
+            </ul>
+          </div>
+          <a id ="Ent-btn" href="#myModal" data-toggle="modal" class="btn">Get in Touch</a>
         </div>
       </div>
     </div>
 
-    <script src="main.js"></script>
-  </body>
+    
+    <!-- Modal for the information box.-->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title" style="text-align: center; font-weight: bold;">Get started with SquadVoice</h4>
+          </div>
+          <div class="modal-body">
+            <strong>Plan selected: </strong><span id="userInputText"></span>
+            <form>
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-6 form-group">
+                  <label for="email">E-mail Address </label>
+                  <input class="form-control" id="emailId" type="email" />
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="phone">Phone No.</label>
+                  <input class="form-control" id="phone" type="number" />
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-6 form-group">
+                  <label for="leads">Number of leads you generate</label>
+                  <select class="form-control" id="leads">
+                    <option value="1">1</option>
+                    <option value="2"> 2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="totalLeads">Total leads in your CRM</label>
+                  <select class="form-control" id="totalLeads">
+                    <option value="1">1</option>
+                    <option value="2"> 2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-6 form-group">
+                  <label for="crm">Which CRM you use</label>
+                  <select class="form-control" id="crm">
+                    <option value="CRM1">CRM1</option>
+                    <option value="CRM2">CRM2</option>
+                    <option value="CRM3">CRM3</option>
+                    <option value="CRM4">CRM4</option>
+                  </select>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="numberOfAgents">Total leads in your CRM</label>
+                  <select class="form-control" id="numberOfAgents">
+                    <option value="1">1</option>
+                    <option value="2"> 2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <strong>Which is your bigger lead source?</strong> 
+                <div>
+                  <input type="checkbox" id="leadSource" value="Zillow"> Zillow
+                  <input type="checkbox" id="leadSource" value="Realtor"> Realtor
+                  <input type="checkbox" id="leadSource" value="Realtor"> Realtor
+                  <input type="checkbox" id="leadSource" value="Others"> Others
+                </div>
+              </div>
+
+              <div class="form-group">
+                <strong>How did you hear about us?</strong> 
+                <div>
+                  <input type="checkbox" id="medium" value="Google"> Google
+                  <input type="checkbox" id="medium" value="Facebook"> Facebook
+                  <input type="checkbox" id="medium" value="Email"> Email
+                  <input type="checkbox" id="medium" value="Friends"> Friends
+                  <input type="checkbox" id="medium" value="Real closers"> Real closers
+                </div>
+              </div>
+              
+
+              <button type="submit" class="btn btn-default" onclick="submitModal()">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
 </html>

@@ -19,15 +19,6 @@ function func1(value) {
   	localStorage.setItem("selectedId", selectedId);
   }
 
-  // function test1(){
-  // 	var lsSelectedId = localStorage.getItem("selectedId");
-  // 	if(!lsSelectedId){
-  // 		lsSelectedId=3;
-  // 		localStorage.setItem("selectedId", lsSelectedId);
-  // 	}
-  // 	func1(lsSelectedId);
-  // }
-
 function updateValues(value){
 	switch(value){
 		case 1:
@@ -85,3 +76,51 @@ window.onload = function() {
 	}
 	func1(parseInt(selectedId));	
 }
+
+document.getElementById("Ent-btn").onclick = function (){
+	document.getElementById("userInputText").innerHTML = "Enterprise";
+}
+
+document.getElementById("qualified20-btn").onclick = function (){
+	document.getElementById("userInputText").innerHTML = "Qualified 20";
+}
+
+document.getElementById("qualified40-btn").onclick = function (){
+	document.getElementById("userInputText").innerHTML = "Qualified 40";
+}
+
+document.getElementById("qualified80-btn").onclick = function (){
+	document.getElementById("userInputText").innerHTML = "Qualified 80";
+}
+
+function submitModal() {
+	var name = document.getElementById("name").value;
+	var email = document.getElementById("emailId").value;
+	var phone = document.getElementById("phone").value;
+	var leadsNumber = document.getElementById("leads").value;
+	var totalLeads = document.getElementById("totalLeads").value;
+	var crm = document.getElementById("crm").value;
+	var agentNumber = document.getElementById("numberOfAgents").value;
+	var leadSource = document.getElementById("leadSource").value;
+	var medium = document.getElementById("medium").value;
+
+	window.alert("The following are the inputs- name: "+ name + " email: " + email + " phone: "+ phone +" Total leads" + leadsNumber +
+	" totalLeads: " + totalLeads + " CRM: " + crm + " agent number " + agentNumber + " lead Source: " + leadSource + " contact chanel: " + medium);
+
+	$('#myModal').modal('hide');
+}
+
+const checkOnlineStatus = async () => {
+  try {
+    const online = await fetch("/1pixel.png");
+    return online.status >= 200 && online.status < 300; // either true or false
+  } catch (err) {
+    return false; // definitely offline
+  }
+};
+
+setInterval(async () => {
+  const result = await checkOnlineStatus();
+  const statusDisplay = document.getElementById("status");
+  statusDisplay.textContent = result ? "Online" : "OFFline";
+}, 3000);
