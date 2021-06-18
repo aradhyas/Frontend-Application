@@ -105,22 +105,8 @@ function submitModal() {
 	var medium = document.getElementById("medium").value;
 
 	window.alert("The following are the inputs- name: "+ name + " email: " + email + " phone: "+ phone +" Total leads" + leadsNumber +
-	" totalLeads: " + totalLeads + " CRM: " + crm + " agent number " + agentNumber + " lead Source: " + leadSource + " contact chanel: " + medium);
+	" totalLeads: " + totalLeads + " CRM: " + crm + " agent number " + agentNumber + " lead Source: " + leadSource + " contact channel: " + medium);
 
 	$('#myModal').modal('hide');
 }
 
-const checkOnlineStatus = async () => {
-  try {
-    const online = await fetch("/1pixel.png");
-    return online.status >= 200 && online.status < 300; // either true or false
-  } catch (err) {
-    return false; // definitely offline
-  }
-};
-
-setInterval(async () => {
-  const result = await checkOnlineStatus();
-  const statusDisplay = document.getElementById("status");
-  statusDisplay.textContent = result ? "Online" : "OFFline";
-}, 3000);
